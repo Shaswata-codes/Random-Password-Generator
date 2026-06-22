@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f3f4f6;
+  color: #374151;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1f2937;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.display-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#password-display {
+  flex-grow: 1;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background-color: #f9fafb;
+  color: #111827;
+  outline: none;
+  text-align: center;
+}
+
+#password-display::placeholder {
+  font-family: inherit;
+  font-weight: normal;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+#copy-btn {
+  background-color: #4b5563;
+  color: #ffffff;
+  border: none;
+  padding: 0 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#copy-btn:hover {
+  background-color: #374151;
+}
+
+#copy-btn:active {
+  transform: scale(0.98);
+}
+
+.strength-container {
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.strength-text {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.strength-none {
+  color: #6b7280;
+}
+
+.strength-weak {
+  color: #ef4444;
+}
+
+.strength-medium {
+  color: #f59e0b;
+}
+
+.strength-strong {
+  color: #10b981;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: #f9fafb;
+  padding: 1.25rem;
+  border-radius: 6px;
+  border: 1px solid #f3f4f6;
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.setting-item label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+#length-slider {
+  width: 100%;
+  cursor: pointer;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.checkbox-item label {
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-primary:active {
+  transform: scale(0.99);
+}
+
+.btn-primary:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+}
